@@ -13,7 +13,7 @@ export interface IHome {
 
 export interface ILibrary {
   title: String;
-  description: String;
+  description?: String;
   video: String;
   content: String;
   created_at: Date;

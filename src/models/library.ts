@@ -6,6 +6,7 @@ const librarySchema = new Schema(
     video: String,
     content: String,
     description: String,
+    thumbnail: String,
     featured: { type: Boolean, default: false },
   },
   { timestamps: true },
