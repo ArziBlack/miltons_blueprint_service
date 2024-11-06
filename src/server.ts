@@ -1,5 +1,6 @@
 import { PORT } from "./config";
 import index from "./routes/index";
+import cors from "cors";
 import { connectDB } from "./config/db";
 import express, { Application, json } from "express";
 import { error_handler } from "./middleware/error_handler";
@@ -11,6 +12,8 @@ if (!PORT) {
 }
 
 const app: Application = express();
+
+app.use(cors({credentials: true}));
 
 app.use(json());
 
