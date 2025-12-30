@@ -9,13 +9,13 @@ const homeSchema = new Schema(
     image: String,
     content: String,
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
 homeSchema.set("toJSON", {
   transform: (_doc, ret) => {
-    delete ret.__v;
-    return ret;
+    const { __v, ...rest } = ret;
+    return rest;
   },
 });
 
